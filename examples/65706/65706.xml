@@ -49,4 +49,22 @@
       <graphic xlink:href="bw_images/34570750.png" xlink:role="34570750" xlink:title="scanned-page"/>
     </supplementary-material>
   </body>
+  <floats-group>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34570743-2124x1508+52+2911.jpeg"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34570745-bw-2724x1984+68+2443.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34570747-2728x1392+56+3031.jpeg"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34570749-2302x1206+300+3235.jpeg"/>
+  </fig>
+</floats-group>
 </article>
