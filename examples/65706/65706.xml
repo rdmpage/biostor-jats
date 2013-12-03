@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "SYSTEM" "jats-archiving-dtd-1.0/JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Proceedings of The Biological Society of Washington</journal-title>
+      </journal-title-group>
+      <issn>0006-324X</issn>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="biostor">65706</article-id>
+      <title-group>
+        <article-title>Two new species of Eleutherodactylus (Amphibia: Anura: Leptodactylidae) from Bolivia</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Lynch</surname>
+            <given-names>J D</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Mcdiarmid</surname>
+            <given-names>R W</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <pub-date pub-type="ppub">
+        <year>1987</year>
+      </pub-date>
+      <volume>100</volume>
+      <fpage>337</fpage>
+      <lpage>346</lpage>
+    </article-meta>
+  </front>
+  <body>
+    <supplementary-material content-type="scanned-pages">
+      <graphic xlink:href="bw_images/34570741.png" xlink:role="34570741" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570742.png" xlink:role="34570742" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570743.png" xlink:role="34570743" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570744.png" xlink:role="34570744" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570745.png" xlink:role="34570745" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570746.png" xlink:role="34570746" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570747.png" xlink:role="34570747" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570748.png" xlink:role="34570748" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570749.png" xlink:role="34570749" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34570750.png" xlink:role="34570750" xlink:title="scanned-page"/>
+    </supplementary-material>
+  </body>
+</article>
