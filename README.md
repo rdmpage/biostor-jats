@@ -14,9 +14,9 @@ djvu2html converts DjVu XML to HTML including hOCR tags, see [The hOCR Embedded 
 
 	php tools/djvu2html.php examples/65706
 
-abby2pictures extracts picture and table blocks from ABBYY OCR, extracts corresponding part of image and puts these in the "figures" folder. It analyses the colours in the images to decide whether to use the B&W or original image for the figure, then adds links to the JATS XML.
+abby_pictures extracts picture and table blocks from ABBYY OCR, extracts corresponding part of image and puts these in the "figures" folder. It analyses the colours in the images to decide whether to use the B&W or original image for the figure, then adds links to the JATS XML.
 
-	php tools/abbyy2pictures.php examples/65706
+	php tools/abbyy_pictures.php examples/65706
 
 ## Stylesheet
 XSLT style sheets are used to display the article. 
