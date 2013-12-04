@@ -81,14 +81,21 @@
 					</xsl:if>
 					<h2>Full text</h2>
 					<p>
-	Full text is available as a scanned copy of the original print version. 
-	Get a printable copy (PDF file) of the <u>complete article</u>, or click on a page image 
-	below to browse HTML for page.
-	
-	<xsl:if test="//back">
-		Links are also available for <a href="#reference-sec">Selected References</a>.
-	</xsl:if>
-	</p>
+						<xsl:text>Full text is available as a scanned copy of the original print version. Get a printable copy (PDF file) of the </xsl:text>
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="//article-id[@pub-id-type=&quot;biostor&quot;]"/>
+								<xsl:text>.pdf</xsl:text>
+							</xsl:attribute>
+							<xsl:text>complete article</xsl:text>
+						</a>
+						<xsl:text>, or click on a page image below to browse HTML for page.</xsl:text>
+						<xsl:if test="//back">
+							<xsl:text>Links are also available for </xsl:text>
+							<a href="#reference-sec">Selected References</a>
+							<xsl:text>.</xsl:text>
+						</xsl:if>
+					</p>
 					<div>
 						<xsl:apply-templates select="//supplementary-material/graphic"/>
 					</div>
