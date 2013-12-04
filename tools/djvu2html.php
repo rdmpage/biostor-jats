@@ -385,7 +385,7 @@ function export_html($page)
 /*
 	Create HTML with hOCR
 */
-function export_html_dom($page)
+function export_html_dom($page, $image_url)
 {
 	global $config;
 	
@@ -415,11 +415,11 @@ function export_html_dom($page)
 	
 	.ocr_page {
 		background-color: white;
-		box-shadow:2px 2px 10px #aaaaaa;
+		/* box-shadow:2px 2px 10px #aaaaaa; */
 		/* border:1px solid black; */
 		position:relative;
-		left: 20px;
-		top: 20px;
+		/* left: 20px;
+		top: 20px; */
 		width: ' . ($scale * $page->bbox[2]) . 'px;
 		height: ' . ($scale * $page->bbox[1]) . 'px;
 	}
@@ -441,7 +441,10 @@ function export_html_dom($page)
 	
 	$ocr_page = $body->appendChild($doc->createElement('div'));
 	$ocr_page->setAttribute('class', 'ocr_page');
-	$ocr_page->setAttribute('title', 'bbox 0 0 ' . ($scale * $page->bbox[2]) . ' ' . ($scale * $page->bbox[1]));
+	$ocr_page->setAttribute('title', 
+		'bbox 0 0 ' . ($scale * $page->bbox[2]) . ' ' . ($scale * $page->bbox[1])
+		. '; image ' . $image_url
+		);
 
 	foreach ($page->regions as $region)
 	{
@@ -519,26 +522,33 @@ else
 		exit();
 	}
 	
-	
+	// PageIDs
 	$pages = get_jats_pages($dir, $reference_id);
+
+	// Page scans
+	$images = get_jats_page_images($dir, $reference_id);
 	
 	$djvu_dir = $dir . '/djvu';
 	$html_dir = $dir . '/html';
 	
 	print_r($pages);
 	
-	foreach ($pages as $page)
+	$num_pages = count($pages);
+	
+	for ($i = 0; $i < $num_pages; $i++)
 	{
-		$xml_filename =  $djvu_dir . '/' . $page . '.xml';
+		$xml_filename =  $djvu_dir . '/' . $pages[$i] . '.xml';
 		
 		$page_data = structure($xml_filename);
 	
 		extract_font_sizes($page_data);
 		
 		//$html = export_html($page_data);
-		$html = export_html_dom($page_data);
 		
-		$html_filename = $html_dir . '/' . $page . '.html';
+		// export (note relative path to images)
+		$html = export_html_dom($page_data, '../' . $images[$i]);
+		
+		$html_filename = $html_dir . '/' . $pages[$i] . '.html';
 		
 		file_put_contents($html_filename, $html);
 	}
