@@ -484,6 +484,9 @@ function export_html_dom($page)
 				$ocr_line->setAttribute('contenteditable', 'true');	
 				$ocr_line->setAttribute('class', 'ocr_line');	
 				$ocr_line->setAttribute('style', 'font-size:' . $fontsize . 'px;line-height:' . $fontsize . 'px;position:absolute;left:' . ($line->bbox[0] * $scale) . 'px;top:' . ($line->bbox[3] * $scale)  . 'px;min-width:' . ($scale *($line->bbox[2] - $line->bbox[0])) . 'px;height:' . ($scale *($line->bbox[1] - $line->bbox[3])) . 'px;');	
+				
+				// hOCR
+				$ocr_line->setAttribute('title', 'bbox ' . ($line->bbox[0] * $scale) . ' ' . ($line->bbox[3] * $scale)  . ' ' . ($scale *$line->bbox[2])  . ' ' . ($scale *$line->bbox[1]) );					
 			
 				$ocr_line->appendChild($doc->createTextNode($line->text));
 			
