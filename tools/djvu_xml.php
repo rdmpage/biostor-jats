@@ -36,9 +36,37 @@ function whereami($node)
     return $xpath;
 }
 
+//--------------------------------------------------------------------------------------------------
+// Page size and DPI of DjVu page
+function djvu_page_size(&$xpath)
+{
+	$page = new stdclass;
+
+ 	$nodeCollection = $xpath->query('//OBJECT/@height');
+	foreach($nodeCollection as $node)
+	{
+		$page->height = $node->firstChild->nodeValue;
+	}
+
+ 	$nodeCollection = $xpath->query('//OBJECT/@width');
+	foreach($nodeCollection as $node)
+	{
+		$page->width = $node->firstChild->nodeValue;
+	}
+	
+ 	$nodeCollection = $xpath->query('//PARAM[@name="DPI"]/@value');
+	foreach($nodeCollection as $node)
+	{
+		$page->dpi = $node->firstChild->nodeValue;
+	}
+
+	return $page;
+}
+
+
 
 //--------------------------------------------------------------------------------------------------
-// Coordinates of a WORD element in a DjVu XML document
+// bbox of DjVu XML document
 function djvu_page_bbox(&$xpath)
 {
 	$bbox = array(0,0,0,0);
