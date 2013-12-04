@@ -28,7 +28,17 @@ function djvu_dimensions($djvu_dir, $page)
 	return $page_dimensions;
 }
 
-	$dir = 'examples/65706';
+//--------------------------------------------------------------------------------------------------
+
+$dir = '';
+if ($argc < 2)
+{
+	echo "Usage: " . str_replace(dirname(__FILE__) . '/', '', __FILE__) . " <directory> \n";
+	exit(1);
+}
+else
+{
+	$dir = $argv[1];
 	
 	if (preg_match('/(?<path>(.*))\/(?<id>\d+)$/', $dir, $m))
 	{
@@ -151,6 +161,6 @@ function djvu_dimensions($djvu_dir, $page)
 
 	$pdf->SetCompression(false);
 	$pdf->Output($pdf_filename, 'F');
-	
+}	
 	
 ?>
