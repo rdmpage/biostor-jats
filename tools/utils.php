@@ -69,25 +69,45 @@ function get_jats_pages($basedir, $reference_id)
 	// Get XML
 	$xml = file_get_contents($xml_filename);
 	
-	// Remove any spurious things which break XML parsers
-	//$xml = clean_xml($xml);
-		
 	$dom= new DOMDocument;
 	$dom->loadXML($xml);
 	$xpath = new DOMXPath($dom);
 	
 	$pages = array();
 	
-	$nodes = $xpath->query ('//body/supplementary-material[@content-type="scanned-pages"]/graphic/@xlink:href');
+	$nodes = $xpath->query ('//body/supplementary-material[@content-type="scanned-pages"]/graphic/@xlink:role');
 	foreach($nodes as $node)
 	{
 		$id = $node->firstChild->nodeValue;;
-		$id = preg_replace('/(bw_)?images\//', '', $id);
-		$id = preg_replace('/\.png$/', '', $id);
 		$pages[] = $id;
 	}
 	
 	return $pages;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Get PageIDs for pages in JATS XML
+function get_jats_page_images($basedir, $reference_id)
+{
+	$xml_filename = $basedir . '/' . $reference_id . '.xml';	
+
+	// Get XML
+	$xml = file_get_contents($xml_filename);
+			
+	$dom= new DOMDocument;
+	$dom->loadXML($xml);
+	$xpath = new DOMXPath($dom);
+	
+	$images = array();
+	
+	$nodes = $xpath->query ('//body/supplementary-material[@content-type="scanned-pages"]/graphic/@xlink:href');
+	foreach($nodes as $node)
+	{
+		$href = $node->firstChild->nodeValue;;
+		$images[] = $href;
+	}
+	
+	return $images;
 }
 
 //--------------------------------------------------------------------------------------------------
