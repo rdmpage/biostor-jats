@@ -75,7 +75,7 @@
 					<div>
 						<xsl:apply-templates select="//contrib-group/contrib[@contrib-type='author']/name"/>
 					</div>
-					<xsl:if test="//abstrac">
+					<xsl:if test="//abstract">
 						<h2>Abstract</h2>
 						<xsl:value-of select="//abstract"/>
 					</xsl:if>
@@ -89,7 +89,19 @@
 							</xsl:attribute>
 							<xsl:text>complete article</xsl:text>
 						</a>
-						<xsl:text>, or click on a page image below to browse HTML for page.</xsl:text>
+						<xsl:text>, or click on a page image below to view HTML for that page.</xsl:text>
+						
+						<xsl:text>View XML markup for this article </xsl:text> 
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="//article-id[@pub-id-type=&quot;biostor&quot;]"/>
+								<xsl:text>.xml</xsl:text>
+							</xsl:attribute>
+							<xsl:text>here</xsl:text>
+						</a>
+						<xsl:text>.</xsl:text>
+						
+						
 						<xsl:if test="//back">
 							<xsl:text>Links are also available for </xsl:text>
 							<a href="#reference-sec">Selected References</a>
