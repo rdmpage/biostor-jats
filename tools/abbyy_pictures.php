@@ -224,7 +224,31 @@ else
 						$graphic->setAttribute('xlink:href', 'figures/' . $page . '-bw-' . $p->geometry . '.png');
 					}
 					
-	
+					// Update hOCR HTML					
+					$html = '<div class="ocr_float"'
+						. ' id="' . $p->geometry . '"'
+						. ' style="position:absolute;left:' . ($scale * $p->left) . 'px;'
+						. 'top:' . ($scale * $p->top) . 'px;'
+						. 'width:' . ($scale * $p->width) . 'px;'
+						. 'height:' . ($scale * $p->height) . 'px;'
+						. '">';
+						
+					$html .= '<img src="../figures/';
+					if (image_is_dark($jpeg_filename))
+					{
+						// "colour"
+						$html .= $page . '-' . $p->geometry . '.jpeg';
+					}
+					else
+					{
+						// B&W
+						$html .= $page . '-bw-' . $p->geometry . '.png';
+					}
+					$html .= '" />';
+					$html .= '</div>';
+					
+					// inject
+					add_to_html_dom($dir . '/html/' . $page . '.html', '//div[@class="ocr_page"]', 'div[@id="2124x1508+52+2911"]', $html);
 				}			
 			}		
 		}

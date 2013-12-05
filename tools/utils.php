@@ -9,7 +9,7 @@ function image_is_dark($image_filename)
 	$dark = false;
 	
 	$rgb_threshold = 160;
-	$percent_threshold = 20;
+	$percent_threshold = 10;
 	
 	$command = "convert " . $image_filename . ' -colors 4 -format "%c" histogram:info:-';
 	//echo $command . "\n";
@@ -160,6 +160,44 @@ function add_to_dom($basedir, $reference_id, $where_to_add, $root, $xml_to_add)
 	*/
 	
 	file_put_contents($xml_filename,  $dom->saveXML());
+
+}
+
+//--------------------------------------------------------------------------------------------------
+// Inject some HTML into the hOCR file
+function add_to_html_dom($html_filename, $where_to_add, $root, $html_to_add)
+{	
+	
+
+	// Get HTML
+	$html = file_get_contents($html_filename);
+	
+		
+	$dom= new DOMDocument;
+	
+	$dom->loadHTML($html);
+	
+	// replacement 
+	$replacement  = $dom->createDocumentFragment();
+	$replacement->appendXML($html_to_add);
+	
+	$xp = new DOMXPath($dom);
+	$oldNode = $xp->query('//' . $where_to_add . '/' . $root)->item(0);
+	if ($oldNode) 
+	{
+		// replace
+		$oldNode->parentNode->replaceChild($replacement, $oldNode);
+	}
+	else
+	{
+		// add
+		$parent = $xp->query('//' . $where_to_add)->item(0);
+		$parent->appendChild($replacement);
+	}
+	
+	//echo $dom->saveHTML();
+		
+	file_put_contents($html_filename,  $dom->saveHTML());
 
 }
 
