@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "SYSTEM" "jats-archiving-dtd-1.0/JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Proceedings of The Biological Society of Washington</journal-title>
+      </journal-title-group>
+      <issn>0006-324X</issn>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="biostor">65767</article-id>
+      <title-group>
+        <article-title>On two new genera of pea crabs parasitic in holothurians (Crustacea: Decapoda: Brachyura: Pinnotheridae) from the Indo-West Pacific, with notes on allied genera</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Ng</surname>
+            <given-names>Peter K L</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Manning</surname>
+            <given-names>Raymond B</given-names>
+          </name>
+        </contrib>
+      </contrib-group>
+      <pub-date pub-type="ppub">
+        <year>2003</year>
+      </pub-date>
+      <volume>116</volume>
+      <fpage>901</fpage>
+      <lpage>919</lpage>
+    </article-meta>
+  </front>
+  <body>
+    <supplementary-material content-type="scanned-pages">
+      <graphic xlink:href="bw_images/34565783.png" xlink:role="34565783" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565784.png" xlink:role="34565784" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565785.png" xlink:role="34565785" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565786.png" xlink:role="34565786" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565787.png" xlink:role="34565787" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565788.png" xlink:role="34565788" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565789.png" xlink:role="34565789" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565790.png" xlink:role="34565790" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565791.png" xlink:role="34565791" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565792.png" xlink:role="34565792" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565793.png" xlink:role="34565793" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565794.png" xlink:role="34565794" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565795.png" xlink:role="34565795" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565796.png" xlink:role="34565796" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565797.png" xlink:role="34565797" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565798.png" xlink:role="34565798" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565799.png" xlink:role="34565799" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565800.png" xlink:role="34565800" xlink:title="scanned-page"/>
+      <graphic xlink:href="bw_images/34565801.png" xlink:role="34565801" xlink:title="scanned-page"/>
+    </supplementary-material>
+  </body>
+  <floats-group>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565786-bw-2450x3046+304+1313.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565790-bw-2412x3460+326+921.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565791-bw-2460x3130+334+1263.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565795-bw-2422x3210+334+1183.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565796-bw-2458x2256+300+2125.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565797-bw-2414x3284+330+1119.png"/>
+  </fig>
+  <fig>
+    <caption/>
+    <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="figures/34565799-bw-2466x2614+310+1797.png"/>
+  </fig>
+</floats-group>
+</article>
